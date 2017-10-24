@@ -3,7 +3,6 @@ from mxnet import gluon, autograd, ndarray as nd
 import mxnet as mx
 import numpy as np
 import sys
-import sys
 sys.path.append('..')
 from cvtransform import Normalize
 from save_img import save_images
