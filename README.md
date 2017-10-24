@@ -10,24 +10,24 @@ There is an office and perfect tutorial by mxnet' team: [Deep Learning - The Str
 
 #### 1. Basics
 
-- [Gluon Basis](https://github.com/AceCoooool/gluon-example/tree/example/1-basics/1_basic.py)
-- [Linear Regression](https://github.com/AceCoooool/gluon-example/tree/example/1-basics/2_linear.py)
-- [Logistic Regression](https://github.com/AceCoooool/gluon-example/tree/example/1-basics/3_logistic.py)
-- [Feedforward Neural Network](https://github.com/AceCoooool/gluon-example/tree/example/1-basics/4_network.py)
+- [Gluon Basis](https://github.com/AceCoooool/gluon-example/tree/master/example/1-basics/1_basic.py)
+- [Linear Regression](https://github.com/AceCoooool/gluon-example/tree/master/example/1-basics/2_linear.py)
+- [Logistic Regression](https://github.com/AceCoooool/gluon-example/tree/master/example/1-basics/3_logistic.py)
+- [Feedforward Neural Network](https://github.com/AceCoooool/gluon-example/tree/master/example/1-basics/4_network.py)
 
 #### 2. Intermediate
 
-- [Convolutional Neural Network](https://github.com/AceCoooool/gluon-example/tree/example/2-intermediate/1_cnn.py)
-- [Deep Residual Network](https://github.com/AceCoooool/gluon-example/tree/example/2-intermediate/2_resnet.py)
-- [Recurrent Neural Network](https://github.com/AceCoooool/gluon-example/tree/example/2-intermediate/3_rnn.py)
-- [Bidirectional Recurrent Neural Network](https://github.com/AceCoooool/gluon-example/tree/example/2-intermediate/4_birnn.py)
-- [Language Model (RNN-LM)](https://github.com/AceCoooool/gluon-example/tree/example/2-intermediate/5_language.py)
-- [Generative Adversarial Network](https://github.com/AceCoooool/gluon-example/tree/example/2-intermediate/6_gan.py)
+- [Convolutional Neural Network](https://github.com/AceCoooool/gluon-example/tree/master/example/2-intermediate/1_cnn.py)
+- [Deep Residual Network](https://github.com/AceCoooool/gluon-example/tree/master/example/2-intermediate/2_resnet.py)
+- [Recurrent Neural Network](https://github.com/AceCoooool/gluon-example/tree/master/example/2-intermediate/3_rnn.py)
+- [Bidirectional Recurrent Neural Network](https://github.com/AceCoooool/gluon-example/tree/master/example/2-intermediate/4_birnn.py)
+- [Language Model (RNN-LM)](https://github.com/AceCoooool/gluon-example/tree/master/example/2-intermediate/5_language.py)
+- [Generative Adversarial Network](https://github.com/AceCoooool/gluon-example/tree/master/example/2-intermediate/6_gan.py)
 
 #### 3. Advanced
 
-- [Neural Style Transfer](https://github.com/AceCoooool/gluon-example/tree/example/3-advanced/1_style_transfer.py)
-- [Variational Auto-Encoder](https://github.com/AceCoooool/gluon-example/tree/example/3-advanced/2_vae.py)
+- [Neural Style Transfer](https://github.com/AceCoooool/gluon-example/tree/master/example/3-advanced/1_style_transfer.py)
+- [Variational Auto-Encoder](https://github.com/AceCoooool/gluon-example/tree/master/example/3-advanced/2_vae.py)
 
 ## Note
 
