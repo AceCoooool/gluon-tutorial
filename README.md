@@ -34,3 +34,19 @@ There is an office and perfect tutorial by mxnet' team: [Deep Learning - The Str
 1. You can run it through: `python xxxx.py`
 2. The **Intermediate** and **Advanced** can switch from `cpu` or `gpu` by change the `gpu=True`，Some examples also provide `symbol=True` for switch the `imperative` or `symbolic`（but some examples I don not know how to do it）
 3. It's my first time to use gluon/mxnet , so there must be some "bad behavior" in the achievement.
+
+## Gluon vs PyTorch
+
+
+|   Model   | Acc(%) | time(s) | Model  | Acc(%) | time(s) |
+| :-------: | :----: | :-----: | :----: | :----: | :-----: |
+|   NN(g)   |   97   | 8.1326  | CNN(g) |   98   | 12.1198 |
+|   NN(p)   |   97   | 19.6208 | CNN(p) |   98   | 22.7114 |
+| ResNet(g) |   81   | 442.88  |        |        |         |
+| ResNet(p) |   85   | 505.09  |        |        |         |
+
+Note:
+
+- The models in the tutorial, not represent other situations.
+- (g) --- gluon, (p) --- pytorch
+- pytorch: [0.2.0](http://pytorch.org/),  mxnet: [0.12.0](https://github.com/apache/incubator-mxnet/releases), python: 3.5
