@@ -1,10 +1,13 @@
 from mxnet.gluon import data, nn, rnn
 from mxnet import gluon, autograd, ndarray as nd
 import mxnet as mx
+import time
 
 # choose cpu or gpu --- default cpu
 gpu = True
 ctx = mx.gpu() if gpu else mx.cpu()
+
+start = time.time()
 
 # Hyper Parameters
 sequence_length = 28
@@ -79,4 +82,4 @@ for images, labels in test_loader:
     correct += (predict == labels).sum().asscalar()
 
 print('Accuracy of the network on the 10000 test images: %d %%' % (100 * correct / total))
-
+print('time:', time.time() - start)

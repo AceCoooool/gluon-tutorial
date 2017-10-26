@@ -1,5 +1,12 @@
+import mxnet as mx
 from mxnet.gluon import data, nn
 from mxnet import gluon, autograd, init
+import time
+
+gpu = False
+ctx = mx.gpu() if gpu else mx.cpu()
+
+start = time.time()
 
 # Hyper Parameters
 input_size = 784
@@ -31,7 +38,7 @@ class Net(nn.Block):
 
 
 net = Net(hidden_size, num_classes)
-net.initialize(init=init.Xavier())
+net.initialize(init=init.Xavier(), ctx=ctx)
 
 # Loss and Optimizer
 criterion = gluon.loss.SoftmaxCrossEntropyLoss()
@@ -41,6 +48,7 @@ optimizer = gluon.Trainer(net.collect_params(), 'adam', {'learning_rate': learni
 for epoch in range(num_epochs):
     for i, (images, labels) in enumerate(train_loader):
         images = images.astype('float32').reshape((-1, input_size)) / 255
+        images, labels = images.as_in_context(ctx), labels.as_in_context(ctx)
         # Forward + Backward + Optimize
         with autograd.record():
             outputs = net(images)
@@ -56,9 +64,11 @@ for epoch in range(num_epochs):
 total, correct = 0, 0
 for images, labels in test_loader:
     images = images.astype('float32').reshape((-1, input_size)) / 255
+    images, labels = images.as_in_context(ctx), labels.as_in_context(ctx)
     outputs = net(images)
     predict = outputs.argmax(1).astype('int32')
     total += labels.shape[0]
     correct += (predict == labels).sum().asscalar()
 
 print('Accuracy of the network on the 10000 test images: %d %%' % (100 * correct / total))
+print('total time:', time.time() - start)

@@ -1,11 +1,13 @@
 from mxnet.gluon import data, nn
 from mxnet import gluon, autograd
 import mxnet as mx
+import time
 
 # choose cpu or gpu --- default cpu
-gpu = False
+gpu = True
 ctx = mx.gpu() if gpu else mx.cpu()
 
+start = time.time()
 # Hyper Parameters
 num_epochs = 5
 input_size = 784
@@ -69,3 +71,4 @@ for images, labels in test_loader:
     correct += (predict == labels).sum().asscalar()
 
 print('Accuracy of the network on the 10000 test images: %d %%' % (100 * correct / total))
+print('total time:', time.time() - start)

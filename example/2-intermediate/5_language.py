@@ -1,13 +1,15 @@
 from mxnet import gluon, init, autograd, ndarray as nd
 from mxnet.gluon import rnn, nn
 import mxnet as mx
-from data.data_utils import Corpus
+from intermediate.data.data_utils import Corpus
+import time
 
 # TODO: this achievement is not efficient
 # choose cpu or gpu --- default cpu
 gpu = True
 ctx = mx.gpu() if gpu else mx.cpu()
 
+start = time.time()
 # Hyper Parameters
 embed_size = 128
 hidden_size = 1024
@@ -99,3 +101,5 @@ with open(sample_path, 'w') as f:
 
         if (i + 1) % 100 == 0:
             print('Sampled [%d/%d] words and save to %s' % (i + 1, num_samples, sample_path))
+
+print("total time:", time.time() - start)

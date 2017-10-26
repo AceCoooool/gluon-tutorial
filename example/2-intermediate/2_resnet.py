@@ -2,14 +2,14 @@ from mxnet import gluon, image, autograd
 from mxnet.gluon import nn, data
 import mxnet.ndarray as nd
 import mxnet as mx
-import sys
-sys.path.append('..')
 from cvtransform import Scale, RandomHorizontalFlip, RandomCrop
+import time
 
 # choose cpu or gpu --- default cpu, choose imperative or symbolic
 gpu, symbol = True, True
 ctx = mx.gpu() if gpu else mx.cpu()
 
+start = time.time()
 # Hyper Parameters
 lr = 0.001
 num_classes = 10
@@ -120,3 +120,4 @@ for imgs, labels in test_loader:
     correct += (predict == labels).sum().asscalar()
 
 print('Accuracy of the model on the test images: %d %%' % (100 * correct / total))
+print("total time:", time.time() - start)

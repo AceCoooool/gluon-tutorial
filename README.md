@@ -42,11 +42,14 @@ There is an office and perfect tutorial by mxnet' team: [Deep Learning - The Str
 | :-------: | :----: | :-----: | :----: | :----: | :-----: |
 |   NN(g)   |   97   | 8.1326  | CNN(g) |   98   | 12.1198 |
 |   NN(p)   |   97   | 19.6208 | CNN(p) |   98   | 22.7114 |
-| ResNet(g) |   81   | 442.88  |        |        |         |
-| ResNet(p) |   85   | 505.09  |        |        |         |
+| ResNet(g) |   81   | 442.88  | RNN(g) |   97   | 12.832  |
+| ResNet(p) |   85   | 505.09  | RNN(p) |   97   | 14.257  |
+| BIRNN(g)  |   97   | 17.908  | LM(g)  |   ??   | 350.584 |
+| BIRNN(p)  |   97   | 18.481  | LM(p)  |   ??   | 305.738 |
 
 Note:
 
 - The models in the tutorial, not represent other situations.
+- GPU: 1060 (6g) 
 - (g) --- gluon, (p) --- pytorch
 - pytorch: [0.2.0](http://pytorch.org/),  mxnet: [0.12.0](https://github.com/apache/incubator-mxnet/releases), python: 3.5
